@@ -1326,10 +1326,19 @@
     .module-form__link:active {
       color: #FF3E79; }
   .module-form__submit {
+    outline: none;
+    cursor: pointer;
     width: 136px;
     height: 32px;
     background: url(./static/submit-btn.png);
     margin-left: 150px; }
+    .module-form__submit:hover {
+      filter: sepia(2);
+    }
+    .module-form__submit:active {
+      filter: sepia(0);
+    }
+
     @media screen and (min-width: 1120px) {
       .module-form__submit {
         margin-left: 272px; } }
