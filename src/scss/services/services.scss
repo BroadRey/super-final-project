@@ -1,0 +1,272 @@
+.main__services {
+  padding: 24px 0 32px 16px;
+
+  @media screen and (min-width: 768px) {
+    padding: 24px 0 40px 24px;
+  }
+
+  @media screen and (min-width: 1120px) {
+    padding: 42px 28px 50px 32px;
+  }
+}
+
+.services {
+  &__header {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1120px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-bottom: 12px;
+
+      div:nth-of-type(2) {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &__heading {
+    position: relative;
+    font-family: "TT Lakes-Bold";
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: $text-black;
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      width: 4px;
+      height: 40px;
+      background: #41F6D7;
+
+      @media screen and (min-width: 768px) {
+        left: -24px;
+        width: 4px;
+        height: 40px;
+        background: #41F6D7;
+      }
+
+      @media screen and (min-width: 1120px) {
+        left: -32px;
+        width: 4px;
+        height: 40px;
+        background: #41F6D7;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1120px) {
+      margin-bottom: 8px;
+      flex-grow: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    overflow-x: scroll;
+    list-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media screen and (min-width: 1120px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list-item {
+    border: 1px solid #F8F8F8;
+    padding: 8px 0;
+  }
+
+  &__link {
+    white-space: nowrap;
+    font-family: "TT Lakes-Medium";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-gray;
+    text-decoration: none;
+    margin: 0 17px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 22px;
+    }
+
+    @media screen and (min-width: 1120px) {
+      margin: 0px 19px;
+    }
+  }
+
+  &__list-item:hover {
+    border: 1px solid #41F6D7;
+    border-radius: 6px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+
+  &__content-block {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__text-block {
+    font-size: 0;
+    margin-right: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 0;
+      flex-basis: 312px;
+      flex-grow: 1.1;
+    }
+  }
+
+  &__text {
+    font-family: "TT Lakes-Medium";
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: $text-black;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1120px) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__tablet-text {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: inline;
+    }
+  }
+
+  &__desctop-text {
+    display: none;
+
+    @media screen and (min-width: 1120px) {
+      display: inline;
+    }
+  }
+
+  &__more-text {
+    display: none;
+  }
+
+  &__more-text--show {
+    display: inline;
+  }
+
+  &__subtitle-block {
+    display: none;
+
+    @media screen and (min-width: 1120px) {
+      font-family: "TT Lakes-Demi";
+      font-size: 16px;
+      line-height: 24px;
+      text-align: right;
+      letter-spacing: -0.2px;
+      color: $text-black;
+      margin-top: 8px;
+      margin-right: 8px;
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    font-family: "TT Lakes-Bold";
+    @media screen and (min-width: 1120px) {
+      text-decoration: none;
+    }
+
+    &:link {
+      color: $text-black
+    } 
+
+    &:visited {
+      color: $text-black;
+    }
+  }
+
+  &__read-more {
+    font-family: "TT Lakes-Medium";
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-black;
+    margin-left: 8px;
+    padding-left: 24px;
+    position: relative;
+    border-bottom: solid #F8F8F8 1px;
+    margin-bottom: 15px;
+    text-decoration: none;
+
+    &::before {
+      content: url("../img/read-more-button-arows_icon.png");
+      position: absolute;
+      left: 0px;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #D9FFF5;
+    }
+
+    &:visited {
+      color: $text-black;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-block {
+    margin-left: -16px;
+    font-size: 0;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 48px;
+      margin-right: 25px;
+      flex-basis: 360px;
+      flex-grow: 1;
+    }
+
+    @media screen and (min-width: 1120px) {
+      margin-left: 36px;
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      border-radius: 6px;
+    }
+  }
+}

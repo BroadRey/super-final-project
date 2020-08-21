@@ -1,0 +1,39 @@
+@font-face {
+    src: url(../fonts/TTLakes-Medium.ttf);
+    font-family: "TT Lakes-Medium";
+}
+
+@font-face {
+    src: url(../fonts/TTLakes-Bold.ttf);
+    font-family: "TT Lakes-Bold";
+}
+
+@font-face {
+    src: url(../fonts/TTLakes-Regular.ttf);
+    font-family: "TT Lakes-Regular";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    background: $background-gray;
+    box-sizing: border-box;
+    font-family: "TT Lakes-Medium";
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
+    
+    @media screen and (min-width: 1120px) {
+        display: flex;
+    }
+}

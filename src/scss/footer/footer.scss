@@ -1,0 +1,53 @@
+.footer {
+    padding: 16px 0 19px 0;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $text-gray;
+    opacity: 0.72;
+
+    &__copyright {
+        padding-bottom: 16px;
+
+        @media screen and (min-width: 768px) {
+            min-width: 233px;
+        }
+    }
+
+    &__politic {
+        padding-bottom: 16px;
+    }
+
+    &__politic-link {
+        text-decoration: none;
+
+        &:link {
+            color: $text-gray;  
+        }
+
+        &:visited {
+            color: $text-gray;
+        }
+
+        &:hover {
+            color: black;
+        }
+
+        &:active {
+            color: $text-gray;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding: 16px 24px 25px 24px;
+    }
+
+    &__information {
+        @media screen and (min-width: 768px) {
+            flex-basis: 213px;
+        }
+    }
+}

@@ -1,0 +1,358 @@
+.sidebar-nav {
+  width: 320px;
+  background: white;
+  box-shadow: 16px 0px 10px 5200px rgba(0, 0, 0, 0.2), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  overflow: hidden;
+  height: 2000px;
+  opacity: 0;
+  z-index: 10;
+  transition: transform 1s ease-out;
+  transform: translate(-1000px);
+  min-width: 320px;
+
+  @media screen and (min-width: 768px) {
+    height: 1865px;
+  }
+
+  @media screen and (min-width: 1120px) {
+    transition: transform 0s;
+    opacity: 1;
+    transform: translate(0);
+    box-shadow: none;
+    align-self: stretch;
+    height: auto;
+  }
+}
+
+.sidebar-blur {
+  display: none;
+  height: 2000px;
+  width: 100vw;
+  position: absolute;
+  left: 320px;
+  top: 0;
+  z-index: 5;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    height: 1865px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 1865px;
+  }
+}
+
+.sidebar-blur--show {
+  display: block;
+  z-index: 10;
+}
+
+.body__sidebar-nav {
+  position: absolute;
+  padding: 0 24px;
+
+  @media screen and (min-width: 1120px) {
+    position: static;
+  }
+}
+
+.sidebar-nav--active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.sidebar-nav__header {
+  margin: 18px 0 48px;
+  font-size: 0;
+}
+
+.sidebar-nav__logo {
+  height: 51px;
+  width: 97px;
+  margin-right: 78px;
+  display: inline-block;
+
+  @media screen and (min-width: 1120px) {
+    margin-right: 118px;
+  }
+}
+
+.sidebar-nav__button {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: $link-red;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  vertical-align: top;
+}
+
+.sidebar-nav__button--exit {
+  margin: 5px 16px 0 0;
+  position: relative;
+  transition: transform 0.8s;
+  background: $link-red url("../../src/img/exit-icon.png") 11px 11px no-repeat;
+
+  @media screen and (min-width: 1120px) {
+    display: none;
+  }
+}
+
+.sidebar-nav__button--exit:hover {
+  background-color: $text-gray;
+  transform: rotate(90deg);
+}
+
+.sidebar-nav__button--search {
+  margin-top: 5px;
+  position: relative;
+  background: $link-red url("../../src/img/search-icon.png") 11px 11px no-repeat;
+}
+
+.sidebar-nav__button--search:hover {
+  animation: search 1s forwards;
+  background-color: $text-gray;
+}
+
+.sidebar-nav__section {
+  margin-bottom: 0px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 268px;
+  }
+}
+
+.sidebar-nav__list {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.sidebar-nav__nav-item {
+  margin: 0 -24px 32px 0;
+  position: relative;
+}
+
+.sidebar-nav__nav-link {
+  text-decoration: none;
+  font-family: "TT Lakes-Medium", serif;
+  display: inline-block;
+}
+
+.sidebar-nav__nav-link:link {
+  color: $text-black;
+}
+
+.sidebar-nav__nav-link:visited {
+  color: $text-black;
+}
+
+.sidebar-nav__nav-sidebar-nav__button--search:hover {
+  color: $text-gray;
+}
+
+.sidebar-nav__nav-item::before {
+  content: "";
+  position: absolute;
+  background: $before-lightblue;
+  width: 4px;
+  height: 32px;
+  top: -2px;
+  left: -24px;
+  border-radius: 0 50px 50px 0;
+  display: none;
+
+  opacity: 0;
+  transform-origin: 1px 50%;
+  transform: scale(0);
+}
+
+.sidebar-nav__nav-item:hover {
+  transform: scale(1.3) translate(40px);
+  background: linear-gradient(to right, rgba(126, 126, 130, 0.1), white 50%);
+}
+
+.sidebar-nav__nav-item:hover > a {
+  color: $text-gray;
+  width: 100%;
+}
+
+.sidebar-nav__nav-item:hover::before {
+  display: block;
+  animation: blue-stick 0.5s forwards;
+}
+
+.sidebar-nav__link-container {
+  margin-bottom: 16px;
+  font-size: 0;
+}
+
+.sidebar-nav__button--phone {
+  margin-right: 16px;
+  position: relative;
+  background: $link-red url("../../src/img/phone-icon.png") 11px 11px no-repeat;
+}
+
+.sidebar-nav__button--phone:hover {
+  background-color: $text-gray;
+  animation: phone 1s infinite linear;
+}
+
+.sidebar-nav__button--message {
+  margin-right: 16px;
+  position: relative;
+}
+
+.sidebar-nav__button--message::before {
+  content: url("../../src/img/message-icon.png");
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 11px;
+  left: 10px;
+}
+
+.sidebar-nav__button--message:hover {
+  background: $text-gray;
+}
+
+.sidebar-nav__button--message:hover::before {
+  animation: message 2s;
+}
+
+.sidebar-nav__button--profile {
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-nav__button--profile::before {
+  content: url("../../src/img/profile-icon.png");
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 11px;
+  left: 9px;
+}
+
+.sidebar-nav__button--profile:hover {
+  background: $text-gray;
+}
+
+.sidebar-nav__button--profile:hover::before {
+  animation: profile 1s forwards;
+}
+
+.sidebar-nav__email {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $text-black;
+  margin-bottom: 12px;
+  display: block;
+  cursor: pointer;
+}
+
+.sidebar-nav__email:hover {
+  color: $text-gray;
+}
+
+.sidebar-nav__phone {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: $text-black;
+  font-weight: 700;
+  margin-bottom: 40px;
+  display: block;
+  cursor: pointer;
+}
+
+.sidebar-nav__phone:hover {
+  color: $text-gray;
+}
+
+.sidebar-nav__languages {
+  font-size: 0;
+  margin-bottom: 32px;
+}
+
+.language {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $text-black;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: none;
+}
+
+.language:hover {
+  color: $text-gray;
+}
+
+.sidebar-nav__language {
+  margin-right: 7px;
+}
+
+.sidebar-nav__language--active {
+  color: $text-gray;
+}
+
+@keyframes search {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes blue-stick {
+  from {
+    transform: scale(10);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes phone {
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  40% {
+    transform: rotate(0deg);
+  }
+
+  60% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes message {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes profile {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,196 @@
+.technique-brands {
+    width: 100%;
+    min-width: 320px;
+    box-sizing: border-box;
+    &__header {
+        background: linear-gradient(270deg, $header-gray 30%, $background-gray);
+        padding: 16px;
+
+        @media screen and (min-width: 768px) {
+            padding: 16px 0 16px 24px;
+            background: linear-gradient(270deg, $header-gray 1.39%, $background-gray);
+        }
+
+        @media screen and (min-width: 1120px) {
+            padding: 16px 32px;
+        }
+    }
+
+    &__text {
+        font-family: sans-serif, "TT Lakes-Medium";
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: $text-gray;
+        width: 320px;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            width: 768px;
+        }
+
+        @media screen and (min-width: 1120px) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.brands-swiper {
+    background: $background-gray;
+    display: block;
+
+    &__main {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 24px 0 0 24px;
+            margin: 0 auto;
+            width: 768px;
+        }
+
+        @media screen and (min-width: 1120px) {
+            margin: 0;
+            width: auto;
+            padding-left: 32px;
+        }
+    }
+
+    &__container {
+        width: 302px;
+        padding-top: 16px !important;
+        background: $background-gray;
+
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            padding-top: 0 !important;
+            height: 184px;
+        }
+    }
+
+    &__slide {
+        border: 1px solid $grey-bgslide;
+        border-radius: 6px;
+        height: 70px !important;
+        box-sizing: border-box;
+
+        @media screen and (min-width: 768px) {
+            width: auto;
+            flex-basis: 224px;
+            margin: 0 24px 16px 0;
+        }
+
+        @media screen and (min-width: 1120px) {
+            margin-right: 32px;
+        }
+    }
+
+    &__pagination {
+        padding-top: 16px;
+        position: static !important;
+        margin-bottom: 12px;
+    }
+}
+
+.brands-swiper__container--show {
+    height: 100%;
+}
+
+.swiper-slide__link {
+    background: white;
+    box-sizing: border-box;
+    width: 238px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid $grey-bgslide;
+
+    @media screen and (min-width: 768px) {
+        width: auto;
+        padding: 0 14px 0 14px;
+    }
+}
+
+.swiper-slide__link:hover .brands-link__icon {
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    background: $bullet-litegray !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: $bullet-gray !important;
+}
+
+.read-more-wrapper__read-more {
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1120px) {
+        margin: 0;
+    }
+}
+
+.read-more-wrapper {
+    @media screen and (min-width: 768px) {
+        background: $background-gray;
+    }
+}
+
+.read-more {
+    padding: 24px 0 32px 32px;
+    background: $background-gray;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        width: 768px;
+        padding-top: 8px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        width: 100%;
+    }
+
+    &__button {
+        background: $background-gray;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: scale(1.05);
+        }
+    }
+
+    &__text {
+        font-family: "TT Lakes-Medium";
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $text-black;
+    }
+
+    &__arrows {
+        margin-right: 17px;
+
+        @media screen and (min-width: 768px) {
+            isplay: inline-block;
+        }
+    }
+}
+
+.read-more__button:hover .read-more__text {
+    color: $text-gray;
+}
